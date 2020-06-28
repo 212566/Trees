@@ -1,0 +1,184 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    background-color: rgb(28,28,28);
+    overflow: hidden;
+
+}
+
+img {
+    display: block;
+}
+
+.nav-container {
+    /* height: 10vh;
+    display: flex;
+    align-items: center;
+    background-color: rgb(28,28,28); */
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 95%;
+    height: 10vh;
+    margin: 0 auto;
+    background-color:rgb(28,28,28);
+}
+
+
+
+.logo-container {
+    width: 60px;
+}
+
+.img-logo {
+    width: 100%;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width:55%;
+    height: 100%;
+
+}
+.nav-list li {
+    height: 100%;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: rgb(230, 225, 225);
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    font-weight: 500;
+
+}
+
+header {
+    background-image: url(./images/tobias-tullius-PXXtq6bp6cs-unsplash.jpg);
+    background-size: 100% 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100%;
+    min-width: 100%;
+
+}
+
+.hamburger-menu {
+    display:none;
+    cursor: pointer;
+}
+
+.hamburger-line {
+    width: 25px;
+    height: 3px;
+    margin: 5px;
+    background-color: rgb(230, 225, 225);;
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        overflow: hidden;
+    }
+    .nav-list {
+        position: absolute;
+        right: 0px;
+        top: 10vh;
+        height: 90vh;
+        width: 100%;
+        background-color: rgb(28,28,28);
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+    }
+
+    .hamburger-menu {
+        display: block;
+    }
+    
+    .nav-list a {
+        opacity: 0;
+    }
+}
+
+.nav-sliding {
+    transform: translateX(0%);
+}
+
+@keyframes navLinksFade {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+@keyframes textSlideLeftToRight {
+    from { 
+        transform: translateX(0%);
+    }
+    to {
+        transform: translateX(112%);
+    }
+}
+
+
+
+
+header h1 {
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    font-size: 7rem;
+    position: absolute;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-name: textSlideLeftToRight;
+    left: -100%;
+}
+
+header h1:nth-child(even) {
+
+}
+
+header h1:nth-child(odd) {
+    /* right: -48.3%; */
+    /* animation-name: textSlideRighToLeft; */
+}
+
+.text-1 {
+    top: 15%;
+    opacity: 0.2;
+    /* animation-delay: 0.5s; */
+
+}
+
+.text-2 {
+    top: 45%;
+    opacity: 0.6;
+    /* animation-delay: 1s; */
+
+}
+
+.text-3 {
+    top: 75%;
+    opacity: 1;
+    /* animation-delay: 1.5s; */
+
+}
