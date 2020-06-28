@@ -153,14 +153,6 @@ header h1 {
     left: -100%;
 }
 
-header h1:nth-child(even) {
-
-}
-
-header h1:nth-child(odd) {
-    /* right: -48.3%; */
-    /* animation-name: textSlideRighToLeft; */
-}
 
 .text-1 {
     top: 15%;
